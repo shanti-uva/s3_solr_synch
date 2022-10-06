@@ -1,0 +1,12 @@
+
+# local override
+# Copy this files to docker-compose-local.yml
+version: '3.1'
+services:
+    s3-solr-sync:
+        # MOUNT FILESYSTEMS TO BE WATCHED HERE
+        # THEIR IN-CONTAINER PATHS SHOULD BE REFERENCED IN .env's WATCHDIRS config array
+        volumes:
+            - /tmp/output/subjects:/opt/output/subjects
+            - /tmp/output/terms:/opt/output/terms
+            - /tmp/output/places:/opt/output/places

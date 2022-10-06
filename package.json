@@ -1,0 +1,27 @@
+{
+  "name": "s3-solr-sync",
+  "version": "1.0.0",
+  "description": "node app to manage synching of s3 directories",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "docker compose -f docker-compose.yml -f docker-compose-local.yml  build",
+    "run": "docker compose -f docker-compose.yml -f docker-compose-local.yml up",
+    "build-run": "docker compose -f docker-compose.yml -f docker-compose-local.yml up --build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanti-uva/s3-solr-synch.git"
+  },
+  "author": "Yuji Shinozaki <ys2n@virginia.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shanti-uva/s3-solr-synch/issues"
+  },
+  "homepage": "https://github.com/shanti-uva/s3-solr-synch#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "dotenv-expand": "^9.0.0",
+    "glob": "^8.0.3"
+  }
+}
